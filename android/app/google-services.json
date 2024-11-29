@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "479482442169",
+    "project_id": "socialmistry-guides",
+    "storage_bucket": "socialmistry-guides.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:479482442169:android:333e3839e429b73e960668",
+        "android_client_info": {
+          "package_name": "com.socialmistry"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAv9HI_fDJkB-stFbaSSMv9_wi52rntM0E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
