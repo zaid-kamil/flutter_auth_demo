@@ -5,8 +5,8 @@
 */
 
 import 'package:flutter_auth_demo/features/auth/domain/entities/app_user.dart';
-import 'package:flutter_auth_demo/features/auth/domain/repo/auth_repo.dart';
-import 'package:flutter_auth_demo/features/auth/presentation/cubits/auth_states.dart';
+import 'package:flutter_auth_demo/features/auth/domain/repos/auth_repo.dart';
+import 'package:flutter_auth_demo/features/auth/presentation/cubits/auth_state.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class AuthCubit extends Cubit<AuthState> {
@@ -44,16 +44,20 @@ class AuthCubit extends Cubit<AuthState> {
   }
 
   Future<void> register(String name, String email, String password) async {
-    try{
+    try {
       emit(AuthLoading());
-      final user = await authRepo.signUpWithEmailAndPassword(email, password, name);
+      final user = await authRepo.signUpWithEmailAndPassword(
+        email,
+        password,
+        name,
+      );
       if (user != null) {
         _currentUser = user;
         emit(Authenticated(user));
       } else {
         emit(Unauthenticated());
       }
-    }catch(e){
+    } catch (e) {
       emit(AuthError(e.toString()));
       emit(Unauthenticated());
     }
