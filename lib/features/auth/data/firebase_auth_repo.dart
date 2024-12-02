@@ -1,9 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter_auth_demo/constants.dart';
 import 'package:flutter_auth_demo/features/auth/domain/entities/app_user.dart';
 import 'package:flutter_auth_demo/features/auth/domain/repos/auth_repo.dart';
-
+import 'package:flutter_auth_demo/shared/constants.dart';
 
 class FirebaseAuthRepo implements AuthRepo {
   final FirebaseAuth firebaseAuth = FirebaseAuth.instance;
@@ -41,10 +40,12 @@ class FirebaseAuthRepo implements AuthRepo {
         uid: userCredential.user!.uid,
         email: userCredential.user!.email!,
         name: name,
-
       );
 
-      await firebaseFirestore.collection(Constants.collectionUser).doc(user.uid).set(user.toJson());
+      await firebaseFirestore
+          .collection(Constants.collectionUser)
+          .doc(user.uid)
+          .set(user.toJson());
       return user;
     } catch (e) {
       throw Exception("Sign up failed: $e");
@@ -61,8 +62,7 @@ class FirebaseAuthRepo implements AuthRepo {
     return AppUser(
       uid: firebaseUser.uid,
       email: firebaseUser.email!,
-      name: firebaseUser.displayName??'',
-
+      name: firebaseUser.displayName ?? '',
     );
   }
 }

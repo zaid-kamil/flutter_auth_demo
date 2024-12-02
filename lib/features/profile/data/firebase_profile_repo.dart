@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:flutter_auth_demo/constants.dart';
 import 'package:flutter_auth_demo/features/profile/domain/entities/profile_user.dart';
 import 'package:flutter_auth_demo/features/profile/domain/repos/profile_repo.dart';
+import 'package:flutter_auth_demo/shared/constants.dart';
 
 class FirebaseProfileRepo implements ProfileRepo {
   final FirebaseFirestore firebaseFirestore = FirebaseFirestore.instance;

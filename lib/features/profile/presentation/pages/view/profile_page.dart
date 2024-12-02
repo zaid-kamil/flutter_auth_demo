@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_auth_demo/features/profile/presentation/pages/view/profile_mobile.dart';
-import 'package:flutter_auth_demo/responsive_layout.dart';
+import 'package:flutter_auth_demo/shared/widgets/responsive_layout.dart';
 
 class ProfilePage extends StatelessWidget {
   final String uid;

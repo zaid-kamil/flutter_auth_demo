@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_auth_demo/constants.dart';
 import 'package:flutter_auth_demo/features/auth/data/firebase_auth_repo.dart';
 import 'package:flutter_auth_demo/features/auth/presentation/cubits/auth_cubit.dart';
 import 'package:flutter_auth_demo/features/auth/presentation/pages/auth_page.dart';
@@ -7,8 +6,9 @@ import 'package:flutter_auth_demo/features/home/presentation/pages/home_page.dar
 import 'package:flutter_auth_demo/features/profile/data/firebase_profile_repo.dart';
 import 'package:flutter_auth_demo/features/profile/presentation/cubits/profile_cubit.dart';
 import 'package:flutter_auth_demo/features/storage/data/firebase_storage_repo.dart';
-import 'package:flutter_auth_demo/theme.dart';
-import 'package:flutter_auth_demo/util.dart';
+import 'package:flutter_auth_demo/shared/constants.dart';
+import 'package:flutter_auth_demo/shared/theme.dart';
+import 'package:flutter_auth_demo/shared/util.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'features/auth/presentation/cubits/auth_state.dart';

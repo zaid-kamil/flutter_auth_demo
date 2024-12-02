@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_auth_demo/features/home/presentation/pages/home_mobile.dart';
-import 'package:flutter_auth_demo/responsive_layout.dart';
+import 'package:flutter_auth_demo/shared/widgets/responsive_layout.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});

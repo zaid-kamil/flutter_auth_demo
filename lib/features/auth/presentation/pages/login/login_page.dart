@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_auth_demo/features/auth/presentation/pages/login/login_mobile.dart';
 import 'package:flutter_auth_demo/features/auth/presentation/pages/login/login_web.dart';
-import 'package:flutter_auth_demo/responsive_layout.dart';
+import 'package:flutter_auth_demo/shared/widgets/responsive_layout.dart';
 
 class LoginPage extends StatelessWidget {
   final void Function()? togglePage;

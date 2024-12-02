@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_auth_demo/constants.dart';
+import 'package:flutter_auth_demo/shared/constants.dart';
 
 class AppTextField extends StatelessWidget {
   @override
